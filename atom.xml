@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-23T02:25:04.880Z</updated>
+  <updated>2020-07-23T02:59:13.790Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,17 @@
     <link href="http://yoursite.com/2020/07/23/Spring-AOP/"/>
     <id>http://yoursite.com/2020/07/23/Spring-AOP/</id>
     <published>2020-07-23T02:25:04.000Z</published>
-    <updated>2020-07-23T02:25:04.880Z</updated>
+    <updated>2020-07-23T02:59:13.790Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h3><p>​    如果自己是Spring IOC 的架构师，现在要在IOC容器的基础上添加AOP的支持，要解决什么问题？</p><ol><li>对用户呈现的接口是什么？</li></ol>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;设计思路&quot;&gt;&lt;a href=&quot;#设计思路&quot; class=&quot;headerlink&quot; title=&quot;设计思路&quot;&gt;&lt;/a&gt;设计思路&lt;/h3&gt;&lt;p&gt;​    如果自己是Spring IOC 的架构师，现在要在IOC容器的基础上添加AOP的支持，要解决什么问题？&lt;/p&gt;
+&lt;
+      
     
     </summary>
     
