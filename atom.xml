@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-23T03:17:00.069Z</updated>
+  <updated>2020-07-25T02:31:14.426Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://yoursite.com/2020/07/23/Spring-AOP/"/>
     <id>http://yoursite.com/2020/07/23/Spring-AOP/</id>
     <published>2020-07-23T02:25:04.000Z</published>
-    <updated>2020-07-23T03:17:00.069Z</updated>
+    <updated>2020-07-25T02:31:14.426Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Spring-AOP-需求"><a href="#Spring-AOP-需求" class="headerlink" title="Spring AOP 需求"></a>Spring AOP 需求</h3><p>​    如果自己是Spring IOC 的架构师，现在要在IOC容器的基础上添加AOP的支持，要解决什么问题？</p><ol><li><p>对程序员用户呈现的接口是什么?</p><ul><li><p>户如何向Spring描述要增强的对象</p></li><li><p>用户如何描述要增强的行为</p></li></ul></li><li><p>Spring IOC 容器如何处理要增强的对象</p><ul><li><p>如何识别要增强的对象</p></li><li><p>在何时增强对象</p></li><li><p>增强对象运行时是如何实现的</p></li></ul></li></ol>]]></content>
+    <content type="html"><![CDATA[<h3 id="Spring-AOP-需求"><a href="#Spring-AOP-需求" class="headerlink" title="Spring AOP 需求"></a>Spring AOP 需求</h3><p>如果自己是Spring IOC 的架构师，现在要在IOC容器的基础上添加AOP的支持，要解决什么问题？</p><ol><li><p>对程序员用户呈现的接口是什么?</p><ul><li><p>户如何向Spring描述要增强的对象</p></li><li><p>用户如何描述要增强的行为</p></li></ul></li><li><p>Spring IOC 容器如何处理要增强的对象</p><ul><li>如何识别要增强的对象</li></ul></li></ol><ul><li>在何时增强对象<ul><li>增强对象运行时是如何实现的</li></ul></li></ul><h3 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h3><p>参考<a href="https://juejin.im/post/5a695b3cf265da3e47449471" target="_blank" rel="noopener">比较Spring AOP与AspectJ</a></p><h4 id="Spring-AOP-and-AspectJ"><a href="#Spring-AOP-and-AspectJ" class="headerlink" title="Spring AOP and AspectJ"></a>Spring AOP and AspectJ</h4><p>对比Spirng AOP和AspectJ的特性：能力和目标、植入方式、内部结构和应用、连接点和简单性。</p><p>结论:</p><ol><li><p>Spring AOP完整的AOP解决方案，它只能用于Spring容器管理的beans。</p></li><li><p>AspectJ使用的是编译期和类加载时进行织入，Spring AOP利用的是运行时织入</p></li><li><p>Spring AOP的实现植入方式不同</p><ul><li>JDK 实现 InnovationHandler接口</li><li>GCLIB继承要增强的对象</li></ul><p><img src="https://user-gold-cdn.xitu.io/2018/1/25/1612b8c5e82e5098?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="springaop-process"></p></li><li><p>AspectJ在运行时不做任何事情，类和切面是直接编译的，其引入了自己的编译期，成为AspectJ Compiler</p></li><li><p>JointPoints。 SpringAOP基于代理模式，因此需要目标类的子类(接口实现或类继承)，并应用响应的横切点关注点。这带来了局限性，即不能跨越”final“的类进行应用横切关注点，因为它们不能覆盖，否则导致运行时异常</p><p><img src="https://user-gold-cdn.xitu.io/2018/1/25/1612b8c5ea2cbad5?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="joinpoint"></p><p><strong>在Spring AOP中，切面不适用于同一个类中调用的方法</strong>，原因是：同一个类中调用一个方法时，并没有调用Spring AOP提供的代理的方法。</p></li><li><p>简单。 Spring AOP 在运行期植入，无缝集成于IOC容器；AspectJ需要引入AJC编译器，重新打包所有库（除非我们切换到编译后或加载时织入）</p></li><li><p>性能。AspectJ经过测试大概8到35倍快于Spring AOP</p><p><img src="https://user-gold-cdn.xitu.io/2018/1/25/1612b8c5ea335612?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="com"></p></li></ol><h3 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h3><ul><li><a href="https://baike.baidu.com/item/cglib" target="_blank" rel="noopener">CGLib(code generation lib)</a> 基于ASM</li><li></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;Spring-AOP-需求&quot;&gt;&lt;a href=&quot;#Spring-AOP-需求&quot; class=&quot;headerlink&quot; title=&quot;Spring AOP 需求&quot;&gt;&lt;/a&gt;Spring AOP 需求&lt;/h3&gt;&lt;p&gt;​    如果自己是Spring IOC 的架构师，
+        &lt;h3 id=&quot;Spring-AOP-需求&quot;&gt;&lt;a href=&quot;#Spring-AOP-需求&quot; class=&quot;headerlink&quot; title=&quot;Spring AOP 需求&quot;&gt;&lt;/a&gt;Spring AOP 需求&lt;/h3&gt;&lt;p&gt;如果自己是Spring IOC 的架构师，现在要在I
       
     
     </summary>
