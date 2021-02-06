@@ -311,6 +311,42 @@
 <li>每个进程的用途是什么？</li>
 </ol>
 <h3 id="PG进程结构"><a href="#PG进程结构" class="headerlink" title="PG进程结构"></a>PG进程结构</h3><p><img src="https://raw.githubusercontent.com/lyq628/blogpic/master/imagespg_children_process.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th align="left">进程</th>
+<th>概述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">baskground writer</td>
+<td>负责将共享缓冲池中的脏页逐渐刷入持久化存储中</td>
+</tr>
+<tr>
+<td align="left">checkpointer</td>
+<td>处理检查点</td>
+</tr>
+<tr>
+<td align="left">autovacuum launcher</td>
+<td>周期性启动自动清理工作进程</td>
+</tr>
+<tr>
+<td align="left">Wal writer</td>
+<td>周期性将WAL缓冲区中的wal数据刷入持久存储中</td>
+</tr>
+<tr>
+<td align="left">statistics collector</td>
+<td>负责收集统计信息，用于pg_stat_activity/pg_stat_database</td>
+</tr>
+<tr>
+<td align="left">logging collector(logger)</td>
+<td>负责将错误消息写入日志文件</td>
+</tr>
+<tr>
+<td align="left">archiver</td>
+<td>负责将日志归档</td>
+</tr>
+</tbody></table>
 <h3 id="PG进程创建"><a href="#PG进程创建" class="headerlink" title="PG进程创建"></a>PG进程创建</h3><p>  main.c -&gt; postmaster.c#PostmasterMain中共计3处进行各种进程创建</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SysLoggerPID = SysLogger_Start();</span><br></pre></td></tr></table></figure>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">StartupPID = StartupDataBase();</span><br></pre></td></tr></table></figure>
