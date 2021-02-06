@@ -310,7 +310,7 @@
 <li>各创建什么进程？</li>
 <li>每个进程的用途是什么？</li>
 </ol>
-<h3 id="PG进程结构"><a href="#PG进程结构" class="headerlink" title="PG进程结构"></a>PG进程结构</h3><p><img src="../images/pg_children_process.png" alt=""></p>
+<h3 id="PG进程结构"><a href="#PG进程结构" class="headerlink" title="PG进程结构"></a>PG进程结构</h3><p><img src="images/pg_children_process.png" alt=""></p>
 <h3 id="PG进程创建"><a href="#PG进程创建" class="headerlink" title="PG进程创建"></a>PG进程创建</h3><p>  main.c -&gt; postmaster.c#PostmasterMain中共计3处进行各种进程创建</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SysLoggerPID = SysLogger_Start();</span><br></pre></td></tr></table></figure>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">StartupPID = StartupDataBase();</span><br></pre></td></tr></table></figure>
